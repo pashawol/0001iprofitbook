@@ -1,0 +1,47 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container-fluid
+			.row
+				.col-auto
+					+e.logo iprofitbook
+				.col-auto.px-0
+					select.custom-select-js 
+						option(value="New clients") New clients 
+						option(value="Новые клиенты база Новые клиенты база") Новые клиенты база Новые клиенты база
+						option(value="Спам") Спам
+						option(value="Постоянные клиенты") Постоянные клиенты
+						option(value="Отказники") Отказники
+						option(value="База клиентов") База клиентов
+						option(value="Подбор персонала") Подбор персонала
+				.col.px-0
+					form
+						+b.search-block
+							.dropdown
+								+e.btn.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									+icon("search")
+								.dropdown-menu()
+									a.dropdown-item(href='#') Action
+									a.dropdown-item(href='#') Another action
+									a.dropdown-item(href='#') Something else here
+							input(type="text" placeholder="Search and filter")
+				.col-auto.d-none.d-md-block
+					+b.circle-tabs
+						+e.btn.btn-outline-success(type="button") 3
+						+e.btn.btn-outline-warning(type="button") 9 
+						+e.btn.btn-outline-danger(type="button") 1 
+
+				+e.text.col-auto 13 deals: $1 021 136
+				.col-auto.d-none.d-lg-block
+					+b.control-block
+						+e.btn--seting(type="button") 
+							+icon("ellipsis-h-solid")
+						+e.btn--var.--horizontal(type="button") 
+							+icon("horizontal")
+						+e.btn--var.--vertical.active(type="button") 
+							+icon("vertical")
+				.col-auto
+					+e.btn-wrap
+						+e.btn.btn-outline-secondary(type="button") Pipeline settings
+						+e.btn.btn-primary(type="button") Add deal 
+	// end .top-line

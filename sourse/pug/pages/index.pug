@@ -1,0 +1,21 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/aside-menu/_aside-menu.pug
+include ../blocks/s-deal/_s-deal.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent 
+	+top-line()
+	header.header
+		+aside-menu
+	+s-deal
+
+	
+	//- +footer()

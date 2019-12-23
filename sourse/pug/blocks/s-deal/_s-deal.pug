@@ -1,0 +1,100 @@
+mixin s-deal()
+	// start s-deal
+	+b.SECTION.s-deal#s-deal&attributes(attributes)
+		.container-fluid
+			+e.row.row
+				mixin head(t,pr,p, color)
+					
+						+b.s-deal-item-head.panel(style=`color:${color}`)
+							+e.arrows
+								+e.inner
+									+e.title= t
+									.row
+										+e.price.col-auto= pr
+										.col= p
+				
+				mixin body(t,pr,name, ...items)
+					
+						+b.s-deal-item-body.panel
+							+e.title= t
+							ul
+								each item in items
+									li= item
+							+e.price= pr
+							+e.name= name 
+							block
+
+				+e.col.col
+					+head("New","$45000",'Deals 2','#FBE392')
+					+body("Universal","$15000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-warning !
+					+body("Lions media","$30000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-success
+							+icon("chevron-right")
+						+e.lamp
+							img(src="img/@2x/light_bulb.png", alt="")
+				+e.col.col
+					+head("Follow-up","$43000",'Deals 1','#B2E5A1')
+					+body("Lions media","$30000","Evan Richard","Anthony Mason","Belgium","Emirates")
+						+e.label.text-danger 12
+						+e.lamp
+							img(src="img/@2x/light_bulb.png", alt="")
+
+				+e.col.col
+					+head("Under-rewiew","$0",'Deals 0','#ED717E')
+
+				+e.col.col
+					+head("Demo","$10300",'Deals 2','#C5B5E4')
+					+body("Lions media","$30000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-success
+							+icon("chevron-right")
+						+e.lamp
+							img(src="img/@2x/light_bulb.png", alt="")
+				+e.col.col
+					+head("Negotiation","$899400",'Deals 5','#9ED7FB')
+					+body("Universal","$15000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-warning !
+					+body("Lions media","$30000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-success
+							+icon("chevron-right")
+						+e.lamp
+							img(src="img/@2x/light_bulb.png", alt="")
+					
+					+body("Lions media","$30000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-success
+							+icon("chevron-right")
+						+e.lamp
+							img(src="img/@2x/light_bulb.png", alt="")
+					
+					+body("Lions media","$30000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-success
+							+icon("chevron-right")
+						+e.lamp
+							img(src="img/@2x/light_bulb.png", alt="")
+					
+					+body("Lions media","$30000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-success
+							+icon("chevron-right")
+						+e.lamp
+							img(src="img/@2x/light_bulb.png", alt="")
+					
+					+body("Lions media","$30000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-success
+							+icon("chevron-right")
+						+e.lamp
+							img(src="img/@2x/light_bulb.png", alt="")
+					- for (var x = 0; x < 5; x++)
+						+body("Lions media","$30000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+							+e.label.text-success
+								+icon("chevron-right")
+							+e.lamp
+								img(src="img/@2x/light_bulb.png", alt="")
+					
+				+e.col.col
+					+head("Won","$23436",'Deals 3','#FBD99E')
+					+body("Lions media","$30000","Evan Richard","Anthony Mason","JPMorgan Chase","Belgium")
+						+e.label.text-success
+							+icon("chevron-right")
+						+e.lamp
+							img(src="img/@2x/light_bulb.png", alt="")
+	// end s-deal

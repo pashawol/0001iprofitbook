@@ -1,0 +1,124 @@
+// start .aside-menu
+// .mCSB_inside > .mCSB_container {
+// 	margin-right: rem(10);
+// 	height: 100%;
+// }
+.aside-menu {
+	// position: absolute;
+	position: fixed;
+	left: 0;
+	top: rem(45);
+	background: #232323;
+	height: calc(100vh - #{rem(45)});
+	padding-top: rem(18);
+	padding-bottom: rem(18);
+	width: rem(48);
+	font-family: $font2, sans-serif;
+	font-size: rem(9);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	&__inner {
+		// height: 100%;
+	}
+
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	&__icon-wrap {
+		margin-left: auto;
+		margin-right: auto;
+		// display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: rem(3);
+		position: relative;
+
+		.icon {
+			font-size: rem(14);
+
+			&-mail {
+				font-size: rem(12);
+
+			}
+		}
+
+		border-radius: 50%;
+		width: rem(29);
+		height: rem(29);
+		border: 1px solid currentColor;
+	}
+
+	&__link {
+		color: #ffffff;
+		display: block;
+		margin-bottom: rem(20);
+		text-decoration: none !important;
+
+		&:hover,
+		&--active {
+			color: rgba($color: #7BAFFF, $alpha: .5);
+		}
+	}
+
+	&__link--settings {
+		margin-top: auto;
+		margin-bottom: 0;
+	}
+
+	&__count {
+		@include a-cent(x);
+		top: auto;
+		background-color: $danger;
+		color: #ffffff;
+		border-radius: 50%;
+		width: rem(10);
+		height: rem(10);
+		color: #ffffff;
+		font-size: rem(8);
+		line-height: rem(10);
+		top: rem(-5);
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.aside-menu

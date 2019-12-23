@@ -1,0 +1,19 @@
+mixin aside-menu()
+	// start aside-menu
+	+b.NAV.aside-menu#aside-menu&attributes(attributes)
+		mixin li(i,a) 
+			+e.link(href="#")&attributes(attributes)
+				+e.icon-wrap
+					block
+					+icon(i)
+				if a
+					+e.text= a
+		+li("menu-0",'Dashboard')
+		+li("menu-1",'Deals')(class="aside-menu__link--active")
+			+e.count 1
+		+li("menu-2",'Task')
+		+li("menu-3",'Mail')
+		+li("menu-4",'Contacts')
+		+li("menu-5",'Analitic')
+		+li("settings")(class="aside-menu__link--settings")
+	// end aside-menu

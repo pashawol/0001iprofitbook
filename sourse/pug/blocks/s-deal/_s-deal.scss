@@ -1,0 +1,214 @@
+// start .s-deal
+.s-deal {
+	// padding-top: 20px;
+	padding-right: rem(12);
+
+	position: relative;
+	overflow-x: auto;
+	overflow-y: hidden;
+	min-height: calc(100vw - #{rem(206)});
+
+	// ov
+	&__row {
+		justify-content: center;
+	}
+
+	.row {
+		@include roww(3);
+
+	}
+
+	.container-fluid {
+		padding-left: rem(9);
+
+		padding-right: rem(9);
+	}
+
+	.container-fluid {
+		width: rem(1270);
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+.panel {
+	padding: rem(10);
+}
+
+// end.s-deal
+.s-deal__col:not(:first-child) {
+	.s-deal-item-head {
+		margin-left: rem(12);
+
+
+		&::before {
+			content: '';
+			@include triangle(rem(12) rem(42 / 2), currentColor, up-right);
+			position: absolute;
+			right: 100%;
+			top: 0;
+		}
+
+		&__arrows {
+			&::before {
+				content: '';
+				@include triangle(rem(12) rem(42 / 2), currentColor, down-right);
+				position: absolute;
+				right: 100%;
+				// top: 0;
+				bottom: 0;
+			}
+		}
+	}
+
+}
+
+.s-deal-item-head {
+	background-color: currentColor;
+	font-size: rem(10);
+	margin-bottom: rem(5);
+	height: rem(42);
+	display: flex;
+
+	align-items: center;
+	position: relative;
+	// transform: translateX(#{rem(12)});
+
+	// clip-path: polygon(95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%, 0% 0%);
+	&::after {
+		content: '';
+		@include triangle(rem(42) rem(12), currentColor, right);
+		position: absolute;
+		left: 100%;
+		top: 0;
+	}
+
+
+
+
+	&__inner {
+		color: $body-color;
+		font-family: Roboto;
+	}
+
+	&__title {
+		font-style: normal;
+		font-weight: bold;
+		font-size: rem(12);
+		// padding-bottom: rem(2);
+	}
+
+	&__price {
+		min-width: rem(60);
+	}
+}
+
+.s-deal-item-body {
+	border: 1px solid #CCCCCC;
+	margin-bottom: rem(5);
+	padding-bottom: rem(10);
+	padding-right: rem(30);
+	padding-top: rem(10);
+	font-size: rem(10);
+	min-height: rem(100);
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	color: #888888;
+
+	ul {
+		list-style-type: none;
+		margin-bottom: rem(2);
+	}
+
+	line-height: 1.2;
+
+	&__title {
+		font-size: rem(12);
+		line-height: 1;
+		color: #000000;
+		font-weight: bold;
+	}
+
+	&__price {
+		font-weight: bold;
+		color: #000000;
+	}
+
+	&__name {
+		margin-top: auto;
+
+	}
+
+	&__label {
+		position: absolute;
+		top: rem(10);
+		right: rem(10);
+		width: rem(16);
+		height: rem(16);
+		border-radius: 50%;
+		font-size: rem(10);
+		border: 1px solid currentColor;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1;
+		text-align: center;
+
+		.icon {
+			font-size: rem(8);
+
+			&-chevron-right {
+
+				margin-left: rem(2);
+			}
+
+			// color: transparent;
+			// stroke-width: 1px;
+			// stroke: currentColor;
+		}
+	}
+
+	&__lamp {
+		position: absolute;
+		bottom: rem(10);
+		right: rem(10);
+	}
+}
