@@ -1,12 +1,12 @@
 // start .s-deal
 .s-deal {
 	// padding-top: 20px;
-	padding-right: rem(12);
+	padding-right: rem(20);
 
 	position: relative;
 	overflow-x: auto;
-	overflow-y: hidden;
-	min-height: calc(100vw - #{rem(206)});
+	overflow-y: auto;
+	height: calc(100vh - #{rem(45)});
 
 	// ov
 	&__row {

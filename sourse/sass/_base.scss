@@ -512,5 +512,14 @@ a {
 // .pagination-wrapper li
 
 .btn {
-	box-shadow: none !important;
+	&:focus {
+
+		box-shadow: none !important;
+	}
+}
+
+.btn.focus,
+.btn:focus {
+	// box-shadow: none !important;
+
 }
