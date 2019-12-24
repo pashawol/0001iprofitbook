@@ -18,9 +18,9 @@ mixin top-line()
 					form
 						+b.search-block
 							.dropdown
-								+e.btn.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+								+e.btn.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false'  id="dropdownMenuButton" )
 									+icon("search")
-								.dropdown-menu()
+								.dropdown-menu(aria-labelledby="dropdownMenuButton")
 									a.dropdown-item(href='#') Action
 									a.dropdown-item(href='#') Another action
 									a.dropdown-item(href='#') Something else here
@@ -34,8 +34,45 @@ mixin top-line()
 				+e.text.col-auto 13 deals: $1 021 136
 				.col-auto.d-none.d-lg-block
 					+b.control-block
-						+e.btn--seting(type="button") 
-							+icon("ellipsis-h-solid")
+						.dropdown 
+							+e.btn--seting.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+								+icon("ellipsis-h-solid") 
+							.dropdown-menu()
+								a.dropdown-item(href='#') 
+									.icon-wrap
+										img(src="img/import.svg", alt="")
+									| Импорт
+								a.dropdown-item(href='#') 
+									.icon-wrap
+										img(src="img/export.svg", alt="")
+									| Экспорт
+								a.dropdown-item(href='#') 
+									.icon-wrap
+										img(src="img/icons8-credit-card-50.png", alt="")
+									| Внешний вид карточки
+								a.dropdown-item(href='#') 
+									.icon-wrap
+										img(src="img/search.png", alt="")
+									| Поиск дублей
+								a.dropdown-item(href='#') 
+									.icon-wrap
+										img(src="img/check.svg", alt="")
+									| Массовые действия
+								.dropdown-divider
+								.dropdown-item.text-secondary Сортировка
+								a.dropdown-item(href='#') По последнему сообщению
+									+icon('arrow-down')
+								a.dropdown-item(href='#') По последнему событию
+									+icon('arrow-down')
+								a.dropdown-item.active(href='#') По дате создания
+									+icon('arrow-down')
+								a.dropdown-item(href='#') По названию
+									+icon('arrow-down')
+								a.dropdown-item(href='#') По бюджету
+									+icon('arrow-down')
+								.dropdown-divider
+								a.dropdown-item.active(href='#') Автообновление
+										+icon('check')
 						+e.btn--var.--horizontal(type="button") 
 							+icon("horizontal")
 						+e.btn--var.--vertical.active(type="button") 

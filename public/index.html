@@ -42,12 +42,12 @@
 							<form>
 								<div class="search-block">
 									<div class="dropdown">
-										<button class="search-block__btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<button class="search-block__btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownMenuButton">
 											<svg class="icon icon-search ">
 												<use xlink:href="img/svg/sprite.svg#search"></use>
 											</svg>
 										</button>
-										<div class="dropdown-menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
 									</div>
 									<input type="text" placeholder="Search and filter"/>
 								</div>
@@ -67,11 +67,41 @@
 						</div>
 						<div class="col-auto d-none d-lg-block">
 							<div class="control-block">
-								<button class="control-block__btn control-block__btn--seting" type="button"> 
-									<svg class="icon icon-ellipsis-h-solid ">
-										<use xlink:href="img/svg/sprite.svg#ellipsis-h-solid"></use>
-									</svg>
-								</button>
+								<div class="dropdown"> 
+									<button class="control-block__btn control-block__btn--seting dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<svg class="icon icon-ellipsis-h-solid ">
+											<use xlink:href="img/svg/sprite.svg#ellipsis-h-solid"></use>
+										</svg>
+									</button>
+									<div class="dropdown-menu"><a class="dropdown-item" href="#"> 
+											<div class="icon-wrap"><img src="img/import.svg" alt=""/></div>Импорт</a><a class="dropdown-item" href="#"> 
+											<div class="icon-wrap"><img src="img/export.svg" alt=""/></div>Экспорт</a><a class="dropdown-item" href="#"> 
+											<div class="icon-wrap"><img src="img/icons8-credit-card-50.png" alt=""/></div>Внешний вид карточки</a><a class="dropdown-item" href="#"> 
+											<div class="icon-wrap"><img src="img/search.png" alt=""/></div>Поиск дублей</a><a class="dropdown-item" href="#"> 
+											<div class="icon-wrap"><img src="img/check.svg" alt=""/></div>Массовые действия</a>
+										<div class="dropdown-divider"></div>
+										<div class="dropdown-item text-secondary">Сортировка</div><a class="dropdown-item" href="#">По последнему сообщению
+											<svg class="icon icon-arrow-down ">
+												<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+											</svg></a><a class="dropdown-item" href="#">По последнему событию
+											<svg class="icon icon-arrow-down ">
+												<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+											</svg></a><a class="dropdown-item active" href="#">По дате создания
+											<svg class="icon icon-arrow-down ">
+												<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+											</svg></a><a class="dropdown-item" href="#">По названию
+											<svg class="icon icon-arrow-down ">
+												<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+											</svg></a><a class="dropdown-item" href="#">По бюджету
+											<svg class="icon icon-arrow-down ">
+												<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+											</svg></a>
+										<div class="dropdown-divider"></div><a class="dropdown-item active" href="#">Автообновление
+											<svg class="icon icon-check ">
+												<use xlink:href="img/svg/sprite.svg#check"></use>
+											</svg></a>
+									</div>
+								</div>
 								<button class="control-block__btn control-block__btn--var control-block__btn--horizontal" type="button"> 
 									<svg class="icon icon-horizontal ">
 										<use xlink:href="img/svg/sprite.svg#horizontal"></use>
@@ -560,6 +590,7 @@
 		<!-- modal-->
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<!-- полифил для picture-->
 		<script src="libs/picturefill/picturefill.min.js"></script>
 		<!-- полифил для object-fit-->
